@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Raleway&display=swap');
+@import url(recipesList.css);
+@import url(navigation.css);
+@import url(recipe.css);
+@import url(about.css);
+@import url(contact.css);
+
+:root{
+    --primaryColor: #FCF6F5FF;
+    --secondaryColor: rgb(197, 45, 63);
+    --navText: #101820FF;
+    --navHover: #FCF6F5FF;
+    --siteNameColor: #FCF6F5FF;
+    scroll-behavior: auto;
+}
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--primaryColor);
+
+}
+li{
+    list-style: none;
+}
+button{
+    outline: none;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 200ms;
+    color: var(--primaryColor);
+    border: none;
+    background-color: var(--secondaryColor);
+    padding-inline: 15px;
+}
+input{
+    outline: none;
+}
+textarea{
+    outline: none;
+    resize: none;
+}
+p{
+    color: black;
+    opacity: 0.8;
+}
+/*dividers*/
+.divider, .sdivider{
+    display: flex;
+    justify-content: center;
+}
+.divider div{
+    margin-block: 50px;
+    width: 65vw;
+    border-bottom: 5px solid var(--secondaryColor);
+}
+.sdivider div{
+    margin-bottom: 50px;
+    width: 65vw;
+    border-bottom: 3px solid rgb(211, 211, 211);
+}
+/*main section*/
+main{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.sectionTitle{
+    text-align: center;
+    color: var(--secondaryColor);
+    font-size: 40px;
+    font-size: bold;
+}
+#goUp{
+    transition: 200ms;
+    display: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 5px;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+}
+#goUp:hover{
+    height: 45px;
+    width: 45px;
+    right: 7px;
+}
+#goBack{
+    display: none;
+    rotate: 270deg;
+    transition: 200ms;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 25px;
+}
+#goBack:hover{
+    height: 45px;
+    width: 45px;
+    left: 27px;
+}
+
+
+/*media queries*/

@@ -1,0 +1,151 @@
+@import url(style.css);
+/*recipe section*/
+#recipeScreen{
+    display: none;
+}
+.recipeTile{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    justify-content: center;
+    grid-gap: 20px;
+}
+.gridItem{
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid rgb(211, 211, 211);
+    background-color: white;
+}
+.gridItem h2{
+    font-size: 32px;
+    text-align: center;
+    color: var(--secondaryColor);
+}
+.gridItem h3{
+    text-align: center;
+    font-size: 28px;
+}
+.requiredItems{
+    grid-column: 1;
+}
+
+/*items list*/
+.itemList{
+    overflow-y: auto;
+    max-height: 550px;
+}
+.itemList::-webkit-scrollbar, .steps-wrap::-webkit-scrollbar{
+    width: 5px;
+}
+.itemList::-webkit-scrollbar-track, .steps-wrap::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.itemList::-webkit-scrollbar-thumb, .steps-wrap::-webkit-scrollbar-thumb{
+    background-color: var(--secondaryColor);
+}
+.recipeItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.recipeItems p{
+    padding: 15px;
+    font-size: 18px;
+}
+.checkmark{
+    user-select: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: 1px solid rgb(211, 211, 211);;
+}
+/*recipe steps*/
+.steps{
+    grid-column: 2;
+}
+.steps-wrap{
+    overflow-y: auto;
+    max-height: 550px;
+}
+.recipeDesc{
+    padding-inline: 0px;
+    text-align: center;
+}
+.steps p{
+    padding: 15px;
+    padding-inline: 50px;
+    font-size: 20px;
+}
+/*comments section*/
+.comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-wrap{
+    display: flex;
+    justify-content: center;
+}
+.comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 55px;
+}
+.comwrap{
+    width: 65%;
+}
+.comwrap div{
+    padding: 10px;
+}
+.nick{
+    font-family: 'Kanit', sans-serif;
+    font-size: 22px;
+    line-height: 1px;
+}
+.commentDate{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--secondaryColor);
+}
+.description{
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(211, 211, 211);
+}
+/*write comment section*/
+.writeComment{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+}
+.commentWrap{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+.commentWrap div{
+    margin-inline: 15px;
+}
+.commentWrap label{
+    font-weight: bold;
+}
+.commentWrap input{
+    outline: none;
+    border: 1px solid var(--secondaryColor);
+    height: 25px;
+    width: 300px;
+}
+.commentWrap textarea{
+    border: 1px solid var(--secondaryColor);
+    height: 300px;
+    width: 1000px;
+    padding: 10px;
+}

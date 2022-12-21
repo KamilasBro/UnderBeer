@@ -1,0 +1,50 @@
+@import url(style.css);
+/*recipe list section*/
+#recipesList{
+    display: block;
+}
+.recipeWrap{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+.targetRecipe{
+    cursor: pointer;
+    display: flex;
+    width: 850px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    transition: 300ms;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.targetRecipe:hover{
+    margin-left: 70px;
+}
+.targetRecipe #thumbnail{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+}
+#recipeimg{
+    height: 230px;
+    max-width: 344.83px;
+    user-select: none;
+}
+.content{
+    border: 2px solid rgb(211, 211, 211);
+    border-left: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 70px;
+    width: 70%;
+}
+.content h1{
+    color: var(--secondaryColor);
+}
+#noRecipes{
+    display: none;
+    height: 50vh;
+    font-size: 22px;
+}

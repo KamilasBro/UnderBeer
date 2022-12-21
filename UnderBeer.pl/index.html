@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderBeer</title>
+</head>
+<body>
+    <section id="searchingBar">
+        <img src="/images/close.png" alt="" id="closeSearch">
+        <textarea id="searchInput" spellcheck="false"></textarea>
+        <button id="searchbtn">Szukaj</button>
+    </section>
+    <nav>
+        <div class="logo">
+            <div>
+                <img src="/images/logo.png" alt="">
+            </div>
+            <div class="siteName">
+                <span>UnderBeer.pl</span>
+            </div>
+        </div>
+        <div class="navbutton" id="recipes">
+            <div>
+                Receptury
+            </div>
+        </div>
+        <div class="navbutton" id="about">
+            <div >
+                O Nas
+            </div>
+        </div>
+        <div class="navbutton" id="contact">
+            <div>
+                Kontakt
+            </div>
+        </div>
+        <div class="sideSection">
+            <div>
+                <img src="/images/search.png" alt="" id="searcher">
+            </div>
+            <div>
+                <img src="/images/plflag.png" alt="" class="flag" id="plFlag">
+            </div>
+            <div>
+                <img src="/images/engflag.png" alt="" class="flag" id="engFlag">
+            </div>
+            <div id="colorSwitch">
+                <img src="/images/lightmode.png" alt="" id="colorChanger">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <img src="/images/goUp.png" alt="" id="goBack">
+        <img src="/images/goUp.png" alt="" id="goUp">
+        <h1 class="sectionTitle" id="sectionTitle">Receptury</h1>
+        <div class="sdivider">
+            <div></div>
+        </div>
+
+        <section id="recipeScreen">
+        <section class="recipeTile" id="recipeTile">
+            
+        </section>
+        <div class="divider">
+            <div></div>
+        </div>
+        <section class="comments">
+            <h1 class="sectionTitle" id="commenth1-1">Komentarze</h1>
+            <div class="btn-wrap">
+                <button id="goToCom">Napisz komentarz</button>
+            </div>
+            <span id="comments">
+           
+            </span>
+        </section>
+        <div class="divider">
+            <div></div>
+        </div>
+        <form class="writeComment" id="writeComment">
+            <h1 class="sectionTitle" id="commenth1-2">Napisz komentarz</h1>
+            <div class="commentWrap">
+                <div>
+                    <label for="" id="commentUserName">Nazwa użytkownika</label>
+                </div>
+                <div>
+                    <input type="text" id="nick" required spellcheck="false">   
+                </div>
+            </div>
+            <div class="commentWrap">
+                <textarea name="comment" id="commentComment" required spellcheck="false"></textarea>
+            </div>
+            <div class="commentWrap">
+                <button id="sendComment">Opublikuj</button>
+            </div>
+        </form>
+        </section>
+        <section id="recipesList">
+            
+        </section>
+        <section id="aboutScreen">
+            <div class="aboutTile">
+                <div class="ele1 ele">
+                    <p>UnderBeer jest fikcyjnym portalem kulinarnym z przepisami o charakterze alkoholowym i nie tylko.</p>
+                </div>
+                <div class="ele2 ele">
+                    <img src="/images/logo.png" alt="">
+                </div>
+                <div class="ele3 ele">
+                    <img src="/images/bottles.png" alt="">
+                </div>
+                <div class="ele4 ele">
+                    <p>Chciałem gdzieś zamieścić swój sposób na przygotowanie podpiwka i tak zrodził się pomysł na projekt.</p>
+                </div>
+                <div class="ele5 ele">
+                    <p>Może kiedyś ta strona stanie się czymś więcej, ale póki co, nie mam takich planów.</p>
+                </div>
+                <div class="ele6 ele">
+                    <img src="/images/bottle.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="contactScreen">
+            <div class="contactTile">
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12151.344214402841!2d21.387346297019285!3d50.1890824238933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d72a77735c14b%3A0xce98a3ec585c52ae!2zxYHEhWN6a2kgQnJ6ZXNraWU!5e0!3m2!1spl!2spl!4v1671472872647!5m2!1spl!2spl"
+                    class="map" style="border:0;" allowfullscreen="" loading="fast" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div id="contactInfo">
+                    <h1>E-Mail:</h1>
+                    <p>UnderBeer@business.com</p>
+                    <h1>Adres:</h1>
+                    <p>Wernera 8 Łączki Brzeskie Polska</p>
+                    <h1>Telefon:</h1>
+                    <p>48+ 705-742-3221</p>
+                </div>
+            </div>
+            <div class="divider">
+                <div></div>
+            </div>
+            <form class="writeMail" id="writeMail">
+                <div>
+                    <h1 class="sectionTitle" id="writeToUs">Napisz do nas!</h1>
+                </div>
+                <div>
+                    <label>E-Mail</label>
+                </div>
+                <div>
+                    <input type="email" id="emailInput" required spellcheck="false">
+                </div>
+                <div>
+                    <textarea name="comment" id="mailComment" required spellcheck="false"></textarea>
+                </div>
+                <div class="sendMail">
+                    <button id="sendMail">Wyślij</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="section1">
+            <div class="logo">
+                <div>
+                    <img src="/images/logo.png" alt="">
+                </div>
+                <div class="siteName">
+                    <span>UnderBeer.pl</span>
+                </div>
+            </div>
+        </section>
+        <section class="section2">
+           <p>Copyright © 2023 Siema Industires</p>
+        </section>
+        <section class="section3">
+            <p id="followUs">Obserwuj nas!</p>
+           <img src="/images/fb.png" alt="">
+           <img src="/images/ig.png" alt="">
+           <img src="/images/twitter.png" alt="">
+        </section>
+    </footer>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

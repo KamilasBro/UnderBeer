@@ -1,0 +1,140 @@
+@import url(style.css);
+/*navigation bar*/
+nav{
+    user-select: none;
+    top: 0;
+    width: 100vw;
+    height: 65px;
+    position: fixed;
+    background-color: var(--secondaryColor);
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+    font-weight: bold;
+    font-size: 18px;
+}
+.logo{
+    cursor: default;
+    align-items: center;
+    display: flex;
+    margin-left: 60px;
+    margin-right: 20px;
+}
+.siteName{
+    font-family: 'Kanit', sans-serif;
+    margin-left: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--siteNameColor);
+    text-shadow: 2px 2px 2px black;
+}
+.logo img{
+    height: 55px;
+}
+.navbutton{
+    padding: 20px;
+    color: var(--primaryColor);
+    cursor: pointer;
+    text-shadow: 1px 1px 1px black;
+    transition: 300ms;
+}
+.navbutton:hover{
+    text-shadow: none;
+    padding-top: 25px;
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid var(--secondaryColor);
+}
+.sideSection{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 40px;
+    height: 65px;
+}
+.sideSection div{
+    margin-inline: 10px;
+}
+.sideSection img{
+    transition: 150ms;
+    height: 30px;
+    cursor: pointer;
+}
+.sideSection img:hover{
+    margin-top: 10px;
+}
+#plFlag{
+    outline: 2px solid rgb(19, 192, 19);
+}
+
+/*searching bar*/
+#searchingBar{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+#closeSearch{
+    transition: 200ms;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    height: 45px;
+}
+#closeSearch:hover{
+    height: 38px;
+}
+#searchInput{
+    margin: 30px;
+    text-align: center;
+    align-items: center;
+    height: 35px;
+    width: 65vw;
+    font-size: 28px;
+    border: 1px solid rgb(211, 211, 211);
+    border-bottom: 2px solid rgb(211, 211, 211);
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+/*footer bar*/
+footer{
+    user-select: none;
+    display: flex;
+    margin-top: 80px;
+    height: 140px;
+    background-color: var(--secondaryColor);
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+}
+footer p{
+    color: white;
+    opacity: 1;
+
+}
+footer section{
+    display: flex;
+    justify-content: center;
+    width: 33vw;
+    align-items: center;
+    color: #FCF6F5FF;
+    font-size: 18px;
+    text-shadow: 1px 2px 2px black;
+    font-family: 'Kanit', sans-serif;
+}
+footer .section3 img{
+    cursor: pointer;
+    transition: 100ms;
+    height: 40px;
+    padding: 10px;
+}
+footer .section3 img:hover{
+    margin-top: 10px;
+}
