@@ -13,7 +13,7 @@
     display: flex;
     width: 850px;
     height: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--background);
     transition: 300ms;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -32,7 +32,7 @@
     user-select: none;
 }
 .content{
-    border: 2px solid rgb(211, 211, 211);
+    border: 2px solid var(--borderColor);
     border-left: none;
     align-items: center;
     display: flex;
@@ -41,7 +41,7 @@
     width: 70%;
 }
 .content h1{
-    color: var(--secondaryColor);
+    color: var(--recipeNameColor);
 }
 #noRecipes{
     display: none;

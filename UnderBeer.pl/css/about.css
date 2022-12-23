@@ -27,8 +27,8 @@
     opacity: 0.8;
 }
 .ele1{
-    border: 2px solid rgb(211, 211, 211);
-    background-color: white;
+    border: 2px solid var(--borderColor);
+    background-color: var(--background);
     grid-column-start: 1;
     grid-row-start: 1;
 }
@@ -42,14 +42,14 @@
     grid-row-start: 2;
 }
 .ele4{
-    border: 2px solid rgb(211, 211, 211);
-    background-color: white;
+    border: 2px solid var(--borderColor);
+    background-color: var(--background);
     grid-column-start: 2;
     grid-row-start: 2;
 }
 .ele5{
-    border: 2px solid rgb(211, 211, 211);
-    background-color: white;
+    border: 2px solid var(--borderColor);
+    background-color: var(--background);
     grid-column-start: 1;
     grid-row-start: 3;
 }

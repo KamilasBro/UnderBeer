@@ -1,7 +1,12 @@
 //prebuild variables
-let curentPage="recipeList", currentRecipe, lastList, lastSearched=false;
+let curentPage="recipeList", currentRecipe, lastList, lastSearched=false,
+searchedPhrase;
 //Loader
-    
+const loadingScreen=document.getElementById("loader-wrapper");
+const loadh1=document.getElementById("loadingh1");
+$(window).on("load",()=>{
+    $(".loader-wrapper").fadeOut("slow");
+  });
 //Navigation
     const recipes=document.getElementById("recipes");
     const about=document.getElementById("about");
@@ -24,10 +29,14 @@ let curentPage="recipeList", currentRecipe, lastList, lastSearched=false;
         recipesList.style.display="block";
         aboutScreen.style.display="none";
         contactScreen.style.display="none";
-        if(curretLang.language=="polish"){
-            sectionTitle.innerHTML=`Receptury`;
+        if(lastSearched==true){
+            sectionTitle.innerHTML=searchedPhrase;
         }else{
-            sectionTitle.innerHTML=`Recipes`;
+            if(curretLang.language=="polish"){
+                sectionTitle.innerHTML="Receptury";
+            }else{
+                sectionTitle.innerHTML="Recipes";
+            }
         }
         scrollUp();
     });
@@ -438,7 +447,7 @@ async function showRecipe(id)
     const closeSearch=document.getElementById("closeSearch");
     const searchInput=document.getElementById("searchInput");
     const searchbtn=document.getElementById("searchbtn");
-    let searchedPhrase;
+
     searcher.addEventListener("click",()=>{
         searchingBar.style.display="flex";
         searchInput.focus();
@@ -502,6 +511,9 @@ class Language
             if(curentPage=="recipeList"){
                 dataforList();
                 sectionTitle.innerHTML=`Receptury`;
+                if(lastSearched==true){
+                    sectionTitle.innerHTML=searchedPhrase;
+                }
             }
             else if(curentPage=="recipe"){
                 showRecipe(currentRecipe);
@@ -539,6 +551,9 @@ class Language
             if(curentPage=="recipeList"){
                 dataforList();
                 sectionTitle.innerHTML=`Recipes`;
+                if(lastSearched==true){
+                    sectionTitle.innerHTML=searchedPhrase;
+                }
             }
             else if(curentPage=="recipe"){
                 showRecipe(currentRecipe);
@@ -594,23 +609,47 @@ engFlag.addEventListener("click",()=>{
 //Color Modes
 
 let darkMode=false;
-let colorMode = document.querySelector(':root');
+let colors = document.querySelector(':root');
 function changeColorMode(){
     if(darkMode==true){
-        colorMode.style.setProperty('--primaryColor', "#101820FF");
-        colorMode.style.setProperty('--secondaryColor', "#FFD662FF");
-        colorMode.style.setProperty('--navText', "#FFD662FF");
-        colorMode.style.setProperty('--navHover', "#101820FF");
-        colorMode.style.setProperty('--siteNameColor', "#FCF6F5FF");
+        colors.style.setProperty('--primaryColor', "rgb(18, 23, 30)");
+        colors.style.setProperty('--secondaryColor', "#0f131a");
+        colors.style.setProperty('--pageTitleColor', "#FCF6F5FF");
+        colors.style.setProperty('--buttonBG', "#c77d28");
+        colors.style.setProperty('--pColor', "#FCF6F5FF");
+        colors.style.setProperty('--borderColor', "#c77d28");
+        colors.style.setProperty('--border2Color', "#cccacb");
+        colors.style.setProperty('--background', "#080d14");
+        colors.style.setProperty('--dividerColor', "#cccacb");
+
+        colors.style.setProperty('--recipeNameColor', "#c77d28");
+
+        colors.style.setProperty('--contacth1Color', "#c77d28");
+
+        colors.style.setProperty('--checkmarkColor', "rgb(197, 45, 63)");
+
         document.getElementById("colorChanger").src="/images/darkmode.png";
+        searcher.src="/images/searchDark.png";
         
     }else{
-        colorMode.style.setProperty('--primaryColor', "#FCF6F5FF");
-        colorMode.style.setProperty('--secondaryColor', "rgb(197, 45, 63)");
-        colorMode.style.setProperty('--navText', "black");
-        colorMode.style.setProperty('--navHover', "#FCF6F5FF");
-        colorMode.style.setProperty('--siteNameColor', "rgb(197, 45, 63)");
+        colors.style.setProperty('--primaryColor', "#FCF6F5FF");
+        colors.style.setProperty('--secondaryColor', "rgb(197, 45, 63)");
+        colors.style.setProperty('--pageTitleColor', "rgb(197, 45, 63)");
+        colors.style.setProperty('--buttonBG', "rgb(197, 45, 63)");
+        colors.style.setProperty('--pColor', "black");
+        colors.style.setProperty('--borderColor', "rgb(211, 211, 211)");
+        colors.style.setProperty('--border2Color', "rgb(197, 45, 63)");
+        colors.style.setProperty('--background', "white");
+        colors.style.setProperty('--dividerColor', "rgb(197, 45, 63)");
+
+        colors.style.setProperty('--recipeNameColor', "rgb(197, 45, 63)");
+
+        colors.style.setProperty('--contacth1Color', "black");
+
+        colors.style.setProperty('--checkmarkColor', "black");
+
         document.getElementById("colorChanger").src="/images/lightmode.png";
+        searcher.src="/images/search.png";
     }
 }
 document.getElementById("colorChanger").addEventListener("click",()=>{

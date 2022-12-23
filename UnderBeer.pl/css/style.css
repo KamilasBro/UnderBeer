@@ -8,16 +8,78 @@
 :root{
     --primaryColor: #FCF6F5FF;
     --secondaryColor: rgb(197, 45, 63);
-    --navText: #101820FF;
-    --navHover: #FCF6F5FF;
-    --siteNameColor: #FCF6F5FF;
+    --pageTitleColor: rgb(197, 45, 63);
+    --buttonBG: rgb(197, 45, 63);
+    --pColor: black;
+    --borderColor: rgb(211, 211, 211);
+    --border2Color: rgb(197, 45, 63);
+    --background: white;
+    --dividerColor: rgb(197, 45, 63);
+
+    --recipeNameColor: rgb(197, 45, 63);
+
+    --contacth1Color: black;
+
+    --checkmarkColor: black;
+
     scroll-behavior: auto;
 }
+/*Loading screen*/
+@keyframes anim{
+    from{
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0;
+    }
+}
+.loader-wrapper {
+    animation: anim 1.5s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255,124,37,1) 0%, rgb(0, 0, 0) 100%);
+    box-shadow: 1px 1px 1px black;
+    animation: loader 0.5s infinite;
+    border-radius: 50%;
+}
+.loader2{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+@keyframes loader{
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(90deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(270deg);}
+    100% { transform: rotate(360deg);}
+}
+
+
 body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: var(--primaryColor);
-
 }
 li{
     list-style: none;
@@ -28,20 +90,22 @@ button{
     font-size: 18px;
     cursor: pointer;
     transition: 200ms;
-    color: var(--primaryColor);
+    color: #FCF6F5FF;
     border: none;
-    background-color: var(--secondaryColor);
+    background-color: var(--buttonBG);
     padding-inline: 15px;
 }
 input{
+    background-color: var(--background);
     outline: none;
 }
 textarea{
+    background-color: var(--background);
     outline: none;
     resize: none;
 }
 p{
-    color: black;
+    color: var(--pColor);
     opacity: 0.8;
 }
 /*dividers*/
@@ -52,22 +116,22 @@ p{
 .divider div{
     margin-block: 50px;
     width: 65vw;
-    border-bottom: 5px solid var(--secondaryColor);
+    border-bottom: 5px solid var(--dividerColor);
 }
 .sdivider div{
     margin-bottom: 50px;
     width: 65vw;
-    border-bottom: 3px solid rgb(211, 211, 211);
+    border-bottom: 3px solid var(--borderColor);
 }
 /*main section*/
 main{
-    margin-top: 80px;
     display: flex;
+    margin-top: 80px;
     flex-direction: column;
 }
 .sectionTitle{
     text-align: center;
-    color: var(--secondaryColor);
+    color: var(--pageTitleColor);
     font-size: 40px;
     font-size: bold;
 }
