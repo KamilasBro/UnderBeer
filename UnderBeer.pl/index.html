@@ -11,16 +11,26 @@
 </head>
 <body>
     <div class="loader-wrapper" id="loader-wrapper">
-        <span class="loader"><span class="loader2"></span></span>
-        <h1 id="loadingh1">Ładowanie</h1>
+        <div class="mug2">
+            <img class="mug" src="/images/mug2.png" alt="">
+        </div>
+        <div class="pour">
+            <div></div>
+        </div>
+        <div class="mug1">
+            <img class="mug" src="/images/mug1.png" alt="">
+        </div>
       </div>
     <section id="searchingBar">
         <img src="/images/close.png" alt="" id="closeSearch">
         <textarea id="searchInput" spellcheck="false"></textarea>
         <button id="searchbtn">Szukaj</button>
     </section>
-    <nav>
-        <div class="logo">
+    <nav id="navbar">
+        <div class="hamburger">
+            <img src="/images/hamburger.png" alt="" id="hamburger" onclick="hamburger()">
+        </div>
+        <div class="logo" id="logo">
             <div>
                 <img src="/images/logo.png" alt="">
             </div>
@@ -166,7 +176,7 @@
             </form>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <section class="section1">
             <div class="logo">
                 <div>

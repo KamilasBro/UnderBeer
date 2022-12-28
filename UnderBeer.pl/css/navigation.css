@@ -12,6 +12,16 @@ nav{
     z-index: 99;
     font-weight: bold;
     font-size: 18px;
+    transition: 300ms;
+}
+.hamburger{
+    display: none;
+    cursor: default;
+    align-items: center;
+    padding: 10px;
+}
+.hamburger img{
+    height: 45px;
 }
 .logo{
     cursor: default;
@@ -68,6 +78,20 @@ nav{
 }
 
 /*searching bar*/
+@keyframes showBar{
+    from{
+        height: 0px;
+    }to{
+        height: 200px;
+    }
+}
+@keyframes hideBar{
+    from{
+        height: 200px;
+    }to{
+        height: 0px;
+    }
+}
 #searchingBar{
     display: none;
     flex-direction: column;
@@ -107,7 +131,6 @@ nav{
 footer{
     user-select: none;
     display: flex;
-    margin-top: 80px;
     height: 140px;
     background-color: var(--secondaryColor);
     align-items: center;
@@ -136,4 +159,64 @@ footer .section3 img{
 }
 footer .section3 img:hover{
     margin-top: 10px;
+}
+
+@media(max-width: 1024px){
+    nav{
+        flex-direction: column;
+    }
+    .hamburger{
+        display: flex;
+    }
+    nav .logo{
+        cursor: default;
+        align-items: center;
+        display: none;
+        margin-left: 20px;
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    .navbutton{
+        display: none;
+    }
+    .navbutton:hover{
+        text-shadow: 1px 1px 1px black;
+        padding-top: 0px;
+        padding: 20px;
+        color: #FCF6F5FF;
+        background-color: transparent;
+        border-bottom: none;
+    }
+    .sideSection{
+        align-items: center;
+        display: none;
+        position: relative;
+        margin-left: 50px;
+    }
+    .sideSection div{
+        margin-inline: 10px;
+    }
+    .sideSection img{
+        transition: 150ms;
+        height: 30px;
+        cursor: pointer;
+    }
+    .sideSection img:hover{
+        margin-top: 0px;
+    }
+    #plFlag{
+        outline: 2px solid rgb(19, 192, 19);
+    }
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer section{
+        width: 350px;
+    }
+    footer .logo{
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }

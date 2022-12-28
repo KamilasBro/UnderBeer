@@ -47,4 +47,5 @@
     display: none;
     height: 50vh;
     font-size: 22px;
+    color: var(--pColor);
 }

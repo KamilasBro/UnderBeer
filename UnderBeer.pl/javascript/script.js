@@ -2,11 +2,14 @@
 let curentPage="recipeList", currentRecipe, lastList, lastSearched=false,
 searchedPhrase;
 //Loader
-const loadingScreen=document.getElementById("loader-wrapper");
-const loadh1=document.getElementById("loadingh1");
 $(window).on("load",()=>{
     $(".loader-wrapper").fadeOut("slow");
-  });
+});
+function load()
+{
+    document.getElementById("loader-wrapper").style.display="block";
+    $(".loader-wrapper").fadeOut("slow");
+}
 //Navigation
     const recipes=document.getElementById("recipes");
     const about=document.getElementById("about");
@@ -20,6 +23,7 @@ $(window).on("load",()=>{
     const noRecipes=document.getElementById("noRecipes");
     const goBack=document.getElementById("goBack");
     goBack.addEventListener("click",()=>{
+        load();
         curentPage="recipeList";
         goBack.style.display="none";
         currentRecipe=0;
@@ -30,6 +34,7 @@ $(window).on("load",()=>{
         aboutScreen.style.display="none";
         contactScreen.style.display="none";
         if(lastSearched==true){
+            document.getElementById("footer").style.display="none";
             sectionTitle.innerHTML=searchedPhrase;
         }else{
             if(curretLang.language=="polish"){
@@ -44,6 +49,8 @@ $(window).on("load",()=>{
     {
         navigate(choice)
         {
+            document.getElementById("footer").style.display="flex";
+            load();
             switch (choice){
                 case 1:
                     lastSearched=false;
@@ -143,6 +150,34 @@ $(window).on("load",()=>{
     contact.addEventListener("click",()=>{
         navbtns.navigate(3);
     });
+    const navbar=document.getElementById("navbar");
+    let delay=false, isHamburgerClicked=false;
+    function hamburger(){
+        if(delay==false)
+        {
+            delay=true;
+            if(isHamburgerClicked==false){
+                isHamburgerClicked=true;
+                navbar.style.height="400px";
+                setTimeout(()=>{
+                    document.getElementById("logo").style.display="flex";
+                    recipes.style.display="block";
+                    about.style.display="block";
+                    contact.style.display="block";
+                    document.querySelector(".sideSection").style.display="flex";
+                },300)
+            }else{
+                isHamburgerClicked=false;
+                navbar.style.height="65px";
+                document.getElementById("logo").style.display="none";
+                recipes.style.display="none";
+                about.style.display="none";
+                contact.style.display="none";
+                document.querySelector(".sideSection").style.display="none";
+            }
+            setTimeout(()=>delay=false,500)
+        }
+    }
 
 //Data
 async function dataforList()
@@ -278,11 +313,14 @@ async function dataforSearch(phrase)
                 document.getElementById("noRecipes").style.display="flex";
             }else{
                 lastList=document.getElementById("recipesList").innerHTML;
+                document.getElementById("footer").style.display="none";
             }
 
 }
 async function showRecipe(id)
 {
+    load();
+    document.getElementById("footer").style.display="flex";
     curentPage="recipe";
     scrollUp();
     let checkmarks=0;
@@ -450,14 +488,19 @@ async function showRecipe(id)
 
     searcher.addEventListener("click",()=>{
         searchingBar.style.display="flex";
+        searchingBar.style.animation="showBar 200ms";
         searchInput.focus();
     });
     closeSearch.addEventListener("click",()=>{
-        searchingBar.style.display="none";
+        searchingBar.style.animation="hideBar 200ms";
+        setTimeout(()=>{
+            searchingBar.style.display="none";
+        },100);
         searchInput.value="";
     });
     searchbtn.addEventListener("click",()=>{
         if(searchInput.value!=""){
+            load();
             navbtns.navigate(1);
             searchingBar.style.display="none";
             searchedPhrase=searchInput.value;
@@ -467,27 +510,31 @@ async function showRecipe(id)
             dataforSearch(searchedPhrase);
         }
     });
-    searchingBar.addEventListener("keydown",(event)=>{
-        let keyPressed=event.code;
-        switch(keyPressed)
-        {
-            case "Enter":
-            if(searchInput.value!=""){
-                navbtns.navigate(1);
-                searchingBar.style.display="none";
-                searchedPhrase=searchInput.value;
-                sectionTitle.innerHTML=searchedPhrase;
-                searchedPhrase=searchedPhrase.toLowerCase();
-                searchInput.value="";
-                dataforSearch(searchedPhrase);
+    document.addEventListener("keydown",(event)=>{
+        if(searchingBar.style.display=="flex"){
+            let keyPressed=event.code;
+            switch(keyPressed)
+            {
+                case "Enter":
+                if(searchInput.value!=""){
+                    navbtns.navigate(1);
+                    searchingBar.style.display="none";
+                    searchedPhrase=searchInput.value;
+                    sectionTitle.innerHTML=searchedPhrase;
+                    searchedPhrase=searchedPhrase.toLowerCase();
+                    searchInput.value="";
+                    dataforSearch(searchedPhrase);
+                }
+                break;
+                case "Escape":
+                    searchingBar.style.animation="hideBar 200ms";
+                    setTimeout(()=>{
+                        searchingBar.style.display="none";
+                    },100);
+                    searchInput.value="";
+                break;
             }
-            break;
-            case "Escape":
-                searchingBar.style.display="none";
-                searchInput.value="";
-            break;
         }
-
     });
 
 //Language
@@ -500,7 +547,6 @@ class Language
     }
     changeLang()
     {
-        scrollUp();
         if(this.language=="english"){
             this.language="polish";
             recipes.innerHTML=`<div>Receptury</div>`;
@@ -595,6 +641,7 @@ plFlag.addEventListener("click",()=>{
     if(curretLang.language=="english"){
         plFlag.style.outline="2px solid rgb(19, 192, 19)";
         engFlag.style.outline="none";
+        load();
         curretLang.changeLang();
     }
 });
@@ -602,6 +649,7 @@ engFlag.addEventListener("click",()=>{
     if(curretLang.language=="polish"){
         plFlag.style.outline="none";
         engFlag.style.outline="2px solid rgb(19, 192, 19)";
+        load();
         curretLang.changeLang();
     }
 });
@@ -611,6 +659,7 @@ engFlag.addEventListener("click",()=>{
 let darkMode=false;
 let colors = document.querySelector(':root');
 function changeColorMode(){
+    load();
     if(darkMode==true){
         colors.style.setProperty('--primaryColor', "rgb(18, 23, 30)");
         colors.style.setProperty('--secondaryColor', "#0f131a");

@@ -42,7 +42,7 @@
     background-color: transparent;
 }
 .itemList::-webkit-scrollbar-thumb, .steps-wrap::-webkit-scrollbar-thumb{
-    background-color: var(--secondaryColor);
+    background-color: var(--pageTitleColor);
 }
 .recipeItems{
     display: flex;
