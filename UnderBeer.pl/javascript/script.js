@@ -537,12 +537,13 @@ async function showRecipe(id)
             dataforSearch(searchedPhrase);
         }
     });
-    document.addEventListener("keydown",(event)=>{
+    searchingBar.addEventListener("keydown",(event)=>{
         if(searchingBar.style.display=="flex"){
             let keyPressed=event.code;
             switch(keyPressed)
             {
                 case "Enter":
+                    event.preventDefault();
                 if(searchInput.value!=""){
                     navbtns.navigate(1);
                     searchingBar.style.display="none";
