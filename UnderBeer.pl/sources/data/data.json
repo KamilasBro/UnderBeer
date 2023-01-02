@@ -90,9 +90,9 @@
             "home",
             "brew"
         ],
-        "imgUrl": "/sources/dataImages/homemade_brew.jpg",
+        "imgUrl": "/sources/dataImages/beer.jpg",
         "polish":{
-            "name":"piwo", 
+            "name":"placeholder1", 
             "description": "Domowy przepis na przygotowanie podpiwka.", 
             "requiredItems":[
                 "Podpiwek Bakalland lub własny mix przypraw- 100g", 
@@ -169,9 +169,9 @@
             "home",
             "brew"
         ],
-        "imgUrl": "/sources/dataImages/homemade_brew.jpg",
+        "imgUrl": "/sources/dataImages/wine.jpg",
         "polish":{
-            "name":"essa", 
+            "name":"placeholder2", 
             "description": "Domowy przepis na przygotowanie podpiwka.", 
             "requiredItems":[
                 "Podpiwek Bakalland lub własny mix przypraw- 100g", 
