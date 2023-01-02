@@ -81,6 +81,7 @@ li{
     list-style: none;
 }
 button{
+    -webkit-tap-highlight-color: transparent;
     outline: none;
     height: 45px;
     font-size: 18px;
@@ -140,8 +141,7 @@ main{
     width: 50px;
     position: fixed;
     right: 5px;
-    margin-top: 50vh;
-    margin-bottom: 50vh;
+    margin-top: 40vh;
 }
 #goUp:hover{
     height: 45px;
@@ -166,3 +166,70 @@ main{
 
 
 /*media queries*/
+@media(max-width:800px){
+    .sectionTitle{
+        font-size: 30px;
+    }
+    .sdivider div{
+        margin-bottom: 25px;
+        width: 80vw;
+    }
+    .divider div{
+        margin-bottom: 25px;
+        width: 80vw;
+    }
+    #goUp{
+        margin-top: 0px;
+    }
+    #goBack{
+        top: 92.5px;
+        left: 5px;
+    }
+    #goBack, #goUp{
+        height: 45px;
+        width: 45px;
+    }
+    #goUp:hover{
+        height: 45px;
+        width: 45px;
+        right: 5px;
+    }
+}
+@media(max-width:610px){
+    button{
+        height: 35px;
+        font-size: 15px;
+        padding-inline: 10px;
+    }
+    .sectionTitle{
+        font-size: 27px;
+    }
+    .sdivider div{
+        width: 90vw;
+        margin-bottom: 0px;
+    }
+    .divider div{
+        width: 90vw;
+    }
+    #goBack, #goUp{
+        height: 40px;
+        width: 40px;
+    }
+    #goUp:hover{
+        height: 40px;
+        width: 40px;
+    }
+}
+@media(max-width:425px){
+    .sectionTitle{
+        font-size: 25px;
+    }
+    #goBack, #goUp{
+        height: 35px;
+        width: 35px;
+    }
+    #goUp:hover{
+        height: 35px;
+        width: 35px;
+    }
+}

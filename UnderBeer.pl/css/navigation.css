@@ -1,5 +1,19 @@
 @import url(style.css);
 /*navigation bar*/
+@keyframes hamburgerRotate1{
+    form{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(90deg);
+    }
+}
+@keyframes hamburgerRotate2{
+    form{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(-90deg);
+    }
+}
 nav{
     user-select: none;
     top: 0;
@@ -42,6 +56,7 @@ nav{
     height: 55px;
 }
 .navbutton{
+    -webkit-tap-highlight-color: transparent;
     padding: 20px;
     color: #FCF6F5FF;
     cursor: pointer;
@@ -66,6 +81,7 @@ nav{
     margin-inline: 10px;
 }
 .sideSection img{
+    -webkit-tap-highlight-color: transparent;
     transition: 150ms;
     height: 30px;
     cursor: pointer;
@@ -105,6 +121,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.918);
 }
 #closeSearch{
+    -webkit-tap-highlight-color: transparent;
     transition: 200ms;
     cursor: pointer;
     position: absolute;
@@ -139,7 +156,6 @@ footer{
 footer p{
     color: #FCF6F5FF;
     opacity: 1;
-
 }
 footer section{
     display: flex;
@@ -161,7 +177,9 @@ footer .section3 img:hover{
     margin-top: 10px;
 }
 
+/*media queries*/
 @media(max-width: 1024px){
+    
     nav{
         flex-direction: column;
     }
@@ -186,6 +204,9 @@ footer .section3 img:hover{
         color: #FCF6F5FF;
         background-color: transparent;
         border-bottom: none;
+    }
+    #closeSearch:hover{
+        height: 0;
     }
     .sideSection{
         align-items: center;
@@ -212,11 +233,65 @@ footer .section3 img:hover{
         height: auto;
     }
     footer section{
-        width: 350px;
+        width: 300px;
     }
     footer .logo{
         margin-top: 10px;
         margin-left: 0px;
         margin-right: 0px;
+    }
+    footer .section3 img:hover{
+        margin-top: 0px;
+    }
+}
+@media(max-width:610px){
+    nav{
+        height: 55px;
+    }
+    .hamburger{
+        padding: 7.5px;
+    }
+    .hamburger img{
+        height: 40px;
+    }
+    #searchingBar{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 200px;
+    }
+    #closeSearch{
+        left: 10px;
+        top: 10px;
+        height: 35px;
+    }
+    #searchInput{
+        margin: 25px;
+        height: 32px;
+        width: 95vw;
+        font-size: 25px;
+    }
+    footer .siteName{
+        font-size: 20px;
+    }
+    footer .logo img{
+        height: 45px;
+    }
+    footer p{
+        font-size: 16px;
+    }
+    footer .section3 img{
+        height: 35px;
+    }
+    @media(max-height:400px)
+    {
+        nav .logo{
+            margin-top: 0px;
+        }
+        .navbutton{
+            padding-block: 7.5px;
+        }
     }
 }

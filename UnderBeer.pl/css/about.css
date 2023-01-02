@@ -57,3 +57,102 @@
     grid-column-start: 2;
     grid-row-start: 3;
 }
+
+/*media queries*/
+@media(max-width:1440px){
+    .aboutTile{
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: repeat(3,220px);
+        justify-content: center;
+        grid-gap: 15px;
+    }
+    .ele{
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ele img{
+        height: 180px;
+    }
+    .ele p{
+        text-align: center;
+        font-size: 24px;
+        padding: 32px;
+        font-weight: bold;
+        opacity: 0.8;
+    }
+}
+@media(max-width:1024px){
+    .aboutTile{
+        display: grid;
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(3,300px);
+        justify-content: center;
+        grid-gap: 0px;
+    }
+    .ele{
+        margin-top: 15px;
+    }
+    .ele img{
+        display: none;
+    }
+    .ele p{
+        font-size: 30px;
+        padding: 32px;
+    }
+    .ele1{
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .ele4{
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .ele5{
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+}
+@media(max-width:800px){
+    .aboutTile{
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(3,220px);
+    }
+    .ele p{
+        font-size: 20px;
+        padding: 22px;
+    }
+}
+@media(max-width:610px){
+    .aboutTile{
+        grid-template-columns: 375px;
+        grid-template-rows: repeat(3,200px);
+    }
+    .ele p{
+        font-size: 18px;
+        padding: 18px;
+    }
+}
+@media(max-width:425px){
+    .aboutTile{
+        grid-template-columns: 355px;
+        grid-template-rows: repeat(3,185px);
+    }
+    .ele p{
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+@media(max-width:375px){
+    .aboutTile{
+        grid-template-columns: 310px;
+        grid-template-rows: repeat(3,160px);
+    }
+    .ele p{
+        text-align: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+}

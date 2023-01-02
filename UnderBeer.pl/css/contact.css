@@ -89,3 +89,100 @@
 .sendMail button{
     margin-top: 10px;
 }
+
+/*media queries*/
+@media(max-width:1440px){
+    .writeMail{
+        grid-template-columns: 630px;
+        grid-template-rows: repeat(6,auto);
+    }
+    .writeMail div:nth-child(1){
+        grid-column: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        min-height: 200px;
+    }
+    .writeMail div:nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .writeMail div:nth-child(3){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .writeMail div:nth-child(4){
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .writeMail div:nth-child(5){
+        grid-column: 1;
+        grid-row: 5;
+    }
+}
+@media(max-width:1024px){
+    .contactTile{
+        grid-template-columns: 615px;
+        grid-template-rows: 400px;
+    }
+    .contactTile div:first-child{
+        grid-column: 1;
+    }
+    .contactTile div:last-child{
+        grid-column: 1;
+        border-top: none;
+        border-left: 2px solid var(--border2Color);
+    }
+    .writeMail{
+        grid-template-columns: 468px;
+        grid-template-rows: repeat(6,auto);
+    }
+}
+@media(max-width:800px){
+    .contactTile{
+        grid-template-columns: 540px;
+        grid-template-rows: 375px;
+    }
+    .contactTile div:last-child h1{
+        font-size: 22px;
+    }
+    .contactTile div:last-child p{
+        font-size: 18px;
+    }
+    .writeMail{
+        grid-template-columns: 468px;
+        grid-template-rows: repeat(6,auto);
+    }
+    .writeMail label{
+        font-size: 22px;
+    }
+}
+@media(max-width:610px){
+    .contactTile{
+        grid-template-columns: 90vw;
+        grid-template-rows: 300px;
+    }
+    .contactTile div:last-child h1{
+        font-size: 18px;
+    }
+    .contactTile div:last-child p{
+        font-size: 14px;
+    }
+    .writeMail{
+        grid-template-columns: 90vw;
+        grid-template-rows: repeat(6,auto);
+    }
+    .writeMail label{
+        font-size: 18px;
+    }
+    .writeMail input{
+        font-size: 14px;
+        height: 25px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .writeMail textarea{
+        margin-top: 20px;
+        font-size: 14px;
+        height: 150px;
+    }
+}

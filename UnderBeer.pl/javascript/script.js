@@ -3,12 +3,12 @@ let curentPage="recipeList", currentRecipe, lastList, lastSearched=false,
 searchedPhrase;
 //Loader
 $(window).on("load",()=>{
-    $(".loader-wrapper").fadeOut("slow");
+    $(".loader-wrapper").fadeOut(1000);
 });
 function load()
 {
     document.getElementById("loader-wrapper").style.display="block";
-    $(".loader-wrapper").fadeOut("slow");
+    $(".loader-wrapper").fadeOut(1000);
 }
 //Navigation
     const recipes=document.getElementById("recipes");
@@ -49,6 +49,20 @@ function load()
     {
         navigate(choice)
         {
+            if(window.innerWidth<=1024){
+                if(window.innerWidth<=610){
+                    navbar.style.height="55px";
+                }else{
+                    navbar.style.height="65px";
+                }
+                document.getElementById("hamburger").style.animation="hamburgerRotate2 0.5s";
+                isHamburgerClicked=false;
+                document.getElementById("logo").style.display="none";
+                recipes.style.display="none";
+                about.style.display="none";
+                contact.style.display="none";
+                document.querySelector(".sideSection").style.display="none";
+            }
             document.getElementById("footer").style.display="flex";
             load();
             switch (choice){
@@ -158,7 +172,12 @@ function load()
             delay=true;
             if(isHamburgerClicked==false){
                 isHamburgerClicked=true;
-                navbar.style.height="400px";
+                document.getElementById("hamburger").style.animation="hamburgerRotate1 0.5s";
+                if(window.innerWidth<=610){
+                    navbar.style.height="100vh";
+                }else{
+                    navbar.style.height="400px";
+                }
                 setTimeout(()=>{
                     document.getElementById("logo").style.display="flex";
                     recipes.style.display="block";
@@ -168,7 +187,12 @@ function load()
                 },300)
             }else{
                 isHamburgerClicked=false;
-                navbar.style.height="65px";
+                document.getElementById("hamburger").style.animation="hamburgerRotate2 0.5s";
+                if(window.innerWidth<=610){
+                    navbar.style.height="55px";
+                }else{
+                    navbar.style.height="65px";
+                }
                 document.getElementById("logo").style.display="none";
                 recipes.style.display="none";
                 about.style.display="none";
@@ -402,16 +426,18 @@ async function showRecipe(id)
     if(curretLang.language=="polish"){
     document.getElementById("recipeTile").innerHTML=`
     <section class="requiredItems gridItem">
-    <div id="need">
+    <div class="reqh1">
         <h2>Potrzebujesz:</h2>
+        <img src="/images/goUp.png" id="needFolding" onclick="fold1()">
     </div>
     <ul class="itemList">
         `+html1+`
     </ul>
     </section>
     <section class="steps gridItem">
-    <div>
+    <div class="stepsh1">
         <h2>Sposób Przygotowania</h2>
+        <img src="/images/goUp.png" id="stepsFolding" onclick="fold2()">
     </div>
     <span class="steps-wrap">
         <div>
@@ -432,16 +458,18 @@ async function showRecipe(id)
     }else{
         document.getElementById("recipeTile").innerHTML=`
     <section class="requiredItems gridItem">
-    <div id="need">
-        <h2>Need</h2>
+    <div class="reqh1">
+        <h2>Potrzebujesz:</h2>
+        <img src="/images/goUp.png" id="needFolding" onclick="fold1()">
     </div>
     <ul class="itemList">
         `+html1+`
     </ul>
     </section>
     <section class="steps gridItem">
-    <div>
+    <div class="stepsh1">
         <h2>Preparation Method</h2>
+        <img src="/images/goUp.png" id="stepsFolding" onclick="fold2()">
     </div>
     <span class="steps-wrap">
         <div>
@@ -479,7 +507,6 @@ async function showRecipe(id)
     contactScreen.style.display="none";
 }
 //Searching
-
     const searcher=document.getElementById("searcher");
     const searchingBar=document.getElementById("searchingBar");
     const closeSearch=document.getElementById("closeSearch");
@@ -538,7 +565,6 @@ async function showRecipe(id)
     });
 
 //Language
-
 class Language
 {
     constructor()
@@ -734,7 +760,82 @@ document.getElementById("colorChanger").addEventListener("click",()=>{
         scrollbehavior.style.setProperty('scroll-behavior', "auto");
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
+//resize
+window.onresize=()=>{
+    if(window.innerWidth>800)
+    {
+        if(window.innerWidth<=1440){
+            isfold1=false, isfold2=false;
+            document.querySelector(".itemList").style.maxHeight="0px";
+            document.querySelector(".steps-wrap").style.maxHeight="0px";
+            document.getElementById("needFolding").style.transform="rotate(180deg)";
+            document.getElementById("stepsFolding").style.transform="rotate(180deg)";
+        }else{
+            if(window.innerWidth<=610){
+                document.querySelector(".itemList").style.maxHeight="350px";
+                document.querySelector(".steps-wrap").style.maxHeight="350px";
+            }else{
+                document.querySelector(".itemList").style.maxHeight="550px";
+                document.querySelector(".steps-wrap").style.maxHeight="550px";
+            }
+            document.getElementById("needFolding").style.transform="rotate(0deg)";
+            document.getElementById("stepsFolding").style.transform="rotate(0deg)";
+        }
+    }
+    if(window.innerWidth<=610){
+        navbar.style.height="55px";
+    }else{
+        navbar.style.height="65px";
+    }
+    delay=false, isHamburgerClicked=false;
+    if(window.innerWidth<=1024){
+        document.getElementById("logo").style.display="none";
+        recipes.style.display="none";
+        about.style.display="none";
+        contact.style.display="none";
+        document.querySelector(".sideSection").style.display="none";
+    }else if(window.innerWidth>=1024){
+        document.getElementById("logo").style.display="flex";
+        recipes.style.display="block";
+        about.style.display="block";
+        contact.style.display="block";
+        document.querySelector(".sideSection").style.display="flex";
+    }
+}
+//folding
+let isfold1=false, isfold2=false;
+function fold1(){
+    if(isfold1==false){
+        document.getElementById("sectionTitle").scrollIntoView();
+        isfold1=true;
+        if(window.innerWidth<=610){
+            document.querySelector(".itemList").style.maxHeight="300px";
+        }else{
+            document.querySelector(".itemList").style.maxHeight="550px";
+        }
+        
+        document.getElementById("needFolding").style.transform="rotate(0deg)";
+    }else{
+        isfold1=false;
+        document.querySelector(".itemList").style.maxHeight="0px";
+        document.getElementById("needFolding").style.transform="rotate(180deg)";
+    }
+}
+function fold2(){
+    if(isfold2==false){
+        document.querySelector(".requiredItems").scrollIntoView();
+        isfold2=true;
+        if(window.innerWidth<=610){
+            document.querySelector(".steps-wrap").style.maxHeight="350px";
+        }else{
+            document.querySelector(".steps-wrap").style.maxHeight="550px";
+        }
+        document.getElementById("stepsFolding").style.transform="rotate(0deg)";
+    }else{
+        isfold2=false;
+        document.querySelector(".steps-wrap").style.maxHeight="0px";
+        document.getElementById("stepsFolding").style.transform="rotate(180deg)";
+    }
 
-
-
+}
 
