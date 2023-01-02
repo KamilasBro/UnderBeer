@@ -554,7 +554,7 @@ async function showRecipe(id)
                     dataforSearch(searchedPhrase);
                 }
                 break;
-                case "Escape":
+                case 27:
                     searchingBar.style.animation="hideBar 200ms";
                     setTimeout(()=>{
                         searchingBar.style.display="none";
