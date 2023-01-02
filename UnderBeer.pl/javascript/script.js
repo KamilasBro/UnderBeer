@@ -462,7 +462,7 @@ async function showRecipe(id)
         document.getElementById("recipeTile").innerHTML=`
     <section class="requiredItems gridItem">
     <div class="reqh1">
-        <h2>Potrzebujesz:</h2>
+        <h2>You Will Need:</h2>
         <img src="/images/goUp.png" id="needFolding" onclick="fold1()">
     </div>
     <ul class="itemList">
