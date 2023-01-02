@@ -35,7 +35,7 @@ function load()
         contactScreen.style.display="none";
         if(lastSearched==true){
             document.getElementById("footer").style.display="none";
-            sectionTitle.innerHTML=searchedPhrase;
+            sectionTitle.innerHTML=searchedPhrase.charAt(0).toUpperCase()+searchedPhrase.slice(1);
         }else{
             if(curretLang.language=="polish"){
                 sectionTitle.innerHTML="Receptury";
@@ -277,7 +277,7 @@ async function dataforSearch(phrase)
                         found=true;
                         if(curretLang.language=="polish"){
                             html+=`<div class="recipeWrap">
-                            <div class="targetRecipe" onclick="showRecipe(`+i+1+`)">
+                            <div class="targetRecipe" onclick="showRecipe(`+data.id+`)">
                                 <div id="thumbnail">
                                     <img src="`+data.imgUrl+`" alt="" id="recipeimg">
                                 </div>
@@ -296,7 +296,7 @@ async function dataforSearch(phrase)
                         }
                         else{
                             html+=`<div class="recipeWrap">
-                            <div class="targetRecipe" onclick="showRecipe(`+i+1+`)">
+                            <div class="targetRecipe" onclick="showRecipe(`+data.id+`)">
                                 <div id="thumbnail">
                                     <img src="`+data.imgUrl+`" alt="" id="recipeimg">
                                 </div>
@@ -531,8 +531,8 @@ async function showRecipe(id)
             navbtns.navigate(1);
             searchingBar.style.display="none";
             searchedPhrase=searchInput.value;
-            sectionTitle.innerHTML=searchedPhrase;
             searchedPhrase=searchedPhrase.toLowerCase();
+            sectionTitle.innerHTML=searchedPhrase.charAt(0).toUpperCase()+searchedPhrase.slice(1);
             searchInput.value="";
             dataforSearch(searchedPhrase);
         }
@@ -548,8 +548,8 @@ async function showRecipe(id)
                     navbtns.navigate(1);
                     searchingBar.style.display="none";
                     searchedPhrase=searchInput.value;
-                    sectionTitle.innerHTML=searchedPhrase;
                     searchedPhrase=searchedPhrase.toLowerCase();
+                    sectionTitle.innerHTML=searchedPhrase.charAt(0).toUpperCase()+searchedPhrase.slice(1);
                     searchInput.value="";
                     dataforSearch(searchedPhrase);
                 }
@@ -763,30 +763,32 @@ document.getElementById("colorChanger").addEventListener("click",()=>{
     }
 //resize
 window.onresize=()=>{
-    if(window.innerWidth>800)
-    {
-        if(window.innerWidth<=1440){
-            isfold1=false, isfold2=false;
-            document.querySelector(".itemList").style.maxHeight="0px";
-            document.querySelector(".steps-wrap").style.maxHeight="0px";
-            document.getElementById("needFolding").style.transform="rotate(180deg)";
-            document.getElementById("stepsFolding").style.transform="rotate(180deg)";
-        }else{
-            if(window.innerWidth<=610){
-                document.querySelector(".itemList").style.maxHeight="350px";
-                document.querySelector(".steps-wrap").style.maxHeight="350px";
+    if(recipeScreen.style.display=="block"){
+        if(window.innerWidth>800)
+        {
+            if(window.innerWidth<=1440){
+                isfold1=false, isfold2=false;
+                document.querySelector(".itemList").style.maxHeight="0px";
+                document.querySelector(".steps-wrap").style.maxHeight="0px";
+                document.getElementById("needFolding").style.transform="rotate(180deg)";
+                document.getElementById("stepsFolding").style.transform="rotate(180deg)";
             }else{
-                document.querySelector(".itemList").style.maxHeight="550px";
-                document.querySelector(".steps-wrap").style.maxHeight="550px";
+                if(window.innerWidth<=610){
+                    document.querySelector(".itemList").style.maxHeight="350px";
+                    document.querySelector(".steps-wrap").style.maxHeight="350px";
+                }else{
+                    document.querySelector(".itemList").style.maxHeight="550px";
+                    document.querySelector(".steps-wrap").style.maxHeight="550px";
+                }
+                document.getElementById("needFolding").style.transform="rotate(0deg)";
+                document.getElementById("stepsFolding").style.transform="rotate(0deg)";
             }
-            document.getElementById("needFolding").style.transform="rotate(0deg)";
-            document.getElementById("stepsFolding").style.transform="rotate(0deg)";
         }
-    }
-    if(window.innerWidth<=610){
-        navbar.style.height="55px";
-    }else{
-        navbar.style.height="65px";
+        if(window.innerWidth<=610){
+            navbar.style.height="55px";
+        }else{
+            navbar.style.height="65px";
+        }
     }
     delay=false, isHamburgerClicked=false;
     if(window.innerWidth<=1024){
