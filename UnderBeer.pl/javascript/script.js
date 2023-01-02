@@ -762,6 +762,7 @@ document.getElementById("colorChanger").addEventListener("click",()=>{
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 //resize
+let lastWidth=window.innerWidth;
 window.onresize=()=>{
     if(recipeScreen.style.display=="block"){
         if(window.innerWidth>800)
@@ -784,25 +785,28 @@ window.onresize=()=>{
                 document.getElementById("stepsFolding").style.transform="rotate(0deg)";
             }
         }
+    }
+    if(window.innerWidth!=lastWidth){
         if(window.innerWidth<=610){
             navbar.style.height="55px";
         }else{
             navbar.style.height="65px";
         }
-    }
-    delay=false, isHamburgerClicked=false;
-    if(window.innerWidth<=1024){
-        document.getElementById("logo").style.display="none";
-        recipes.style.display="none";
-        about.style.display="none";
-        contact.style.display="none";
-        document.querySelector(".sideSection").style.display="none";
-    }else if(window.innerWidth>=1024){
-        document.getElementById("logo").style.display="flex";
-        recipes.style.display="block";
-        about.style.display="block";
-        contact.style.display="block";
-        document.querySelector(".sideSection").style.display="flex";
+        delay=false, isHamburgerClicked=false;
+        document.getElementById("hamburger").style.animation="hamburgerRotate2 0.5s";
+        if(window.innerWidth<=1024){
+            document.getElementById("logo").style.display="none";
+            recipes.style.display="none";
+            about.style.display="none";
+            contact.style.display="none";
+            document.querySelector(".sideSection").style.display="none";
+        }else if(window.innerWidth>1024){
+            document.getElementById("logo").style.display="flex";
+            recipes.style.display="block";
+            about.style.display="block";
+            contact.style.display="block";
+            document.querySelector(".sideSection").style.display="flex";
+        }
     }
 }
 //folding
