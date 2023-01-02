@@ -187,12 +187,14 @@
     }
 }
 @media(max-width:1440px){
+    
     .recipeTile{
         grid-template-columns: 80vw;
         grid-template-rows: repeat(2,auto);
         grid-gap: 0px;
     }
     .requiredItems{
+        grid-column: 1;
         grid-row: 1;
     }
     .steps{
@@ -205,6 +207,7 @@
     }
     .itemList{
         max-height: 0px;
+        margin: 0px;
     }
     .steps-wrap{
         max-height: 0px;
