@@ -3,12 +3,12 @@ let curentPage="recipeList", currentRecipe, lastList, lastSearched=false,
 searchedPhrase;
 //Loader
 $(window).on("load",()=>{
-    $(".loader-wrapper").fadeOut(1000);
+    $(".loader-wrapper").fadeOut(1500);
 });
 function load()
 {
     document.getElementById("loader-wrapper").style.display="block";
-    $(".loader-wrapper").fadeOut(1000);
+    $(".loader-wrapper").fadeOut(1500);
 }
 //Navigation
     const recipes=document.getElementById("recipes");
