@@ -539,10 +539,10 @@ async function showRecipe(id)
     });
     searchingBar.addEventListener("keydown",(event)=>{
         if(searchingBar.style.display=="flex"){
-            let keyPressed=event.code;
+            let keyPressed=event.which;
             switch(keyPressed)
             {
-                case "Enter":
+                case 13:
                     event.preventDefault();
                 if(searchInput.value!=""){
                     navbtns.navigate(1);
