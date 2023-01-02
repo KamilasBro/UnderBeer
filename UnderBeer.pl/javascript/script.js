@@ -202,6 +202,9 @@ function load()
             setTimeout(()=>delay=false,500)
         }
     }
+    function homepage(){
+        navbtns.navigate(1);
+    }
 
 //Data
 async function dataforList()

@@ -38,7 +38,7 @@ nav{
     height: 45px;
 }
 .logo{
-    cursor: default;
+    cursor: pointer;
     align-items: center;
     display: flex;
     margin-left: 60px;
