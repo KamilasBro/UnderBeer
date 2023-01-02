@@ -167,6 +167,10 @@ main{
 
 /*media queries*/
 @media(max-width:800px){
+    .mug{
+        height: 120px;
+        width: 120px;
+    }
     .sectionTitle{
         font-size: 30px;
     }
@@ -196,6 +200,10 @@ main{
     }
 }
 @media(max-width:610px){
+    .mug{
+        height: 100px;
+        width: 100px;
+    }
     button{
         height: 35px;
         font-size: 15px;
