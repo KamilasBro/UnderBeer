@@ -520,6 +520,11 @@ async function showRecipe(id)
         searchingBar.style.display="flex";
         searchingBar.style.animation="showBar 200ms";
         searchInput.focus();
+        if(curretLang.language=="polish"){
+            $(searchInput).attr('placeholder','Wyszukaj Recepturę');
+        }else{
+            $(searchInput).attr('placeholder','Search for a recipe');
+        }
     });
     closeSearch.addEventListener("click",()=>{
         searchingBar.style.animation="hideBar 200ms";
