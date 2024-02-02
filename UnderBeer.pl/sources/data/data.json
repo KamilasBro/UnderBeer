@@ -14,7 +14,7 @@
                 "Podpiwek Bakalland - 100g.", 
                 "Duży Garnek - min. 10l.", 
                 "Ścierka lub gęste sitko.",
-                "Świeże drożdże - 5-10g.",
+                "Świeże drożdże - 5-7g",
                 "Drugi Garnek 10l lub inne naczynia np. miski.",
                 "Kubek lub szklanka.",
                 "Szklane lub plastikowe butelki ze szczelnym korkiem."
@@ -38,7 +38,7 @@
                 "Podpiwek Bakalland - 100g.", 
                 "Large Pot - min. 10l.", 
                 "Rag or a dense strainer.",
-                "Fresh yeast - 10-20g.",
+                "Fresh yeast - 5-7g.",
                 "Second Pot 10l or other utensils e.g. bowls.",
                 "Cup or glass.",
                 "Glass or plastic bottles with an airtight cork."
@@ -80,53 +80,55 @@
             "piwko"
         ],
         "imgUrl": "/sources/dataImages/beer.jpg",
-        "polish":{
-            "name":"placeholder1", 
-            "description": "Domowy przepis na przygotowanie piwa.", 
-            "requiredItems":[
-                "Podpiwek Bakalland lub własny mix przypraw- 100g", 
-                "Duży Garnek - min. 10l", 
+        "polish": {
+            "name": "Domowe Piwo",
+            "description": "Domowy przepis na przygotowanie piwa.",
+            "requiredItems": [
+                "Słód jęczmienny - 1 kg",
+                "Chmiel - 50g",
+                "Drożdże piwne - 10-20g",
+                "Woda - 10 litrów",
+                "Duży Garnek - min. 10l",
                 "Ścierka lub gęste sitko",
-                "Świeże drożdże - 5-10g",
-                "Drugi Garnek 10l lub inne naczynia np. miski.",
                 "Kubek lub szklanka",
                 "Szklane lub plastikowe butelki ze szczelnym korkiem"
             ],
-            "steps":[
-                "Gotujemy 10 litrów wody.", 
-                "Wsypujemy zawartość podpiwka do wrzącej wody i gotujemy przez 15 min.", 
-                "Wsypujemy 500g cukru do wywaru i mieszamy przez minutę.",
-                "Odstawiamy wywar do schłodzenia (mniej niż 40℃)",
-                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki przypraw.",
-                "Zlewamy wywar do czystego garnka. W 50ml w kubku/szklance wody mieszamy 5-10g drożdży i dodajemy do wywaru.",
-                "Do czystych i suchych butelek wlewamy podpiwek do maks. 3/4 wysokości.",
-                "Odstawiamy podpiwek zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
-            ],
-            "postStepsDescription": "Podpiwek po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzony."
-        },
-        "english":{
-            "name":"placeholder1", 
-            "description": "Domowy przepis na przygotowanie piwa.", 
-            "requiredItems":[
-                "Podpiwek Bakalland lub własny mix przypraw- 100g", 
-                "Duży Garnek - min. 10l", 
-                "Ścierka lub gęste sitko",
-                "Świeże drożdże - 10-20g",
-                "Drugi Garnek 10l lub inne naczynia np. miski.",
-                "Kubek lub szklanka",
-                "Szklane lub plastikowe butelki ze szczelnym korkiem"
-            ],
-            "steps":[
-                "Gotujemy 10 litrów wody.", 
-                "Wsypujemy zawartość podpiwka do wrzącej wody i gotujemy przez 15 min.", 
-                "Wsypujemy 500g cukru do wywaru i mieszamy przez minutę.",
-                "Odstawiamy wywar do schłodzenia (mniej niż 40℃)",
-                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki przypraw.",
+            "steps": [
+                "Podgrzewamy 10 litrów wody.",
+                "Dodajemy słód jęczmienny i gotujemy przez 15 minut.",
+                "Dodajemy chmiel i gotujemy przez kolejne 10 minut.",
+                "Odstawiamy wywar do schłodzenia (mniej niż 40℃).",
+                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki.",
                 "Zlewamy wywar do czystego garnka. W 50ml w kubku/szklance wody mieszamy 10-20g drożdży i dodajemy do wywaru.",
-                "Do czystych i suchych butelek wlewamy podpiwek do maks. 3/4 wysokości.",
-                "Odstawiamy podpiwek zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
+                "Do czystych i suchych butelek wlewamy piwo do maks. 3/4 wysokości.",
+                "Odstawiamy piwo zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
             ],
-            "postStepsDescription": "Podpiwek po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzony."
+            "postStepsDescription": "Piwo po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzone."
+        },
+        "english": {
+            "name": "Homemade Beer",
+            "description": "Recipe for preparing homemade beer.",
+            "requiredItems": [
+                "Barley malt - 1 kg",
+                "Hops - 50g",
+                "Brewer's yeast - 10-20g",
+                "Water - 10 liters",
+                "Large Pot - min. 10l",
+                "Cloth or dense strainer",
+                "Cup or glass",
+                "Glass or plastic bottles with airtight cork"
+            ],
+            "steps": [
+                "Boil 10 liters of water.",
+                "Add barley malt and boil for 15 minutes.",
+                "Add hops and boil for another 10 minutes.",
+                "Set the brewing aside to cool (less than 40℃).",
+                "Strain through a cloth or strainer into a second pot or dish(es). Wash the first pot. Discard any leftover ingredients.",
+                "Pour the brewing into a clean pot. Mix 10-20g of brewer's yeast in 50ml of water in a cup/glass and add to the brewing.",
+                "Pour the brewing into clean and dry bottles to a maximum of 3/4 of the height.",
+                "Set the brew aside in winter for 5 days, in summer for 3 days. The first day we keep in a warm place, then in a cool place."
+            ],
+            "postStepsDescription": "Once prepared, consume the beer within 2 weeks. After opening, store in the refrigerator for up to 2 days. It tastes best chilled."
         },
         "comments":{
             "name":[
@@ -154,52 +156,54 @@
         ],
         "imgUrl": "/sources/dataImages/wine.jpg",
         "polish":{
-            "name":"placeholder2", 
+            "name":"Domowe Wino", 
             "description": "Domowy przepis na przygotowanie podpiwka.", 
-            "requiredItems":[
-                "Podpiwek Bakalland lub własny mix przypraw- 100g", 
-                "Duży Garnek - min. 10l", 
+            "requiredItems": [
+                "Owoce (np. winogrona, truskawki) - 2 kg",
+                "Cukier - 500g",
+                "Drożdże winne - 10-20g",
+                "Woda - 10 litrów",
+                "Duży Garnek - min. 10l",
                 "Ścierka lub gęste sitko",
-                "Świeże drożdże - 10-20g",
-                "Drugi Garnek 10l lub inne naczynia np. miski.",
                 "Kubek lub szklanka",
                 "Szklane lub plastikowe butelki ze szczelnym korkiem"
             ],
-            "steps":[
-                "Gotujemy 10 litrów wody.", 
-                "Wsypujemy zawartość podpiwka do wrzącej wody i gotujemy przez 15 min.", 
-                "Wsypujemy 500g cukru do wywaru i mieszamy przez minutę.",
-                "Odstawiamy wywar do schłodzenia (mniej niż 40℃)",
-                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki przypraw.",
+            "steps": [
+                "Podgrzewamy 10 litrów wody.",
+                "Dodajemy owoce i gotujemy przez 15 minut.",
+                "Dodajemy cukier i mieszamy przez minutę.",
+                "Odstawiamy wywar do schłodzenia (mniej niż 40℃).",
+                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki.",
                 "Zlewamy wywar do czystego garnka. W 50ml w kubku/szklance wody mieszamy 10-20g drożdży i dodajemy do wywaru.",
-                "Do czystych i suchych butelek wlewamy podpiwek do maks. 3/4 wysokości.",
-                "Odstawiamy podpiwek zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
+                "Do czystych i suchych butelek wlewamy wino do maks. 3/4 wysokości.",
+                "Odstawiamy wino zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
             ],
-            "postStepsDescription": "Podpiwek po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzony."
+            "postStepsDescription": "Wino po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzone."
         },
-        "english":{
-            "name":"placeholder2", 
-            "description": "Domowy przepis na przygotowanie podpiwka.", 
-            "requiredItems":[
-                "Podpiwek Bakalland lub własny mix przypraw- 100g", 
-                "Duży Garnek - min. 10l", 
-                "Ścierka lub gęste sitko",
-                "Świeże drożdże - 10-20g",
-                "Drugi Garnek 10l lub inne naczynia np. miski.",
-                "Kubek lub szklanka",
-                "Szklane lub plastikowe butelki ze szczelnym korkiem"
+        "english": {
+            "name": "Homemade Wine",
+            "description": "Recipe for preparing homemade wine.",
+            "requiredItems": [
+                "Fruits (e.g., grapes, strawberries) - 2 kg",
+                "Sugar - 500g",
+                "Wine yeast - 10-20g",
+                "Water - 10 liters",
+                "Large Pot - min. 10l",
+                "Cloth or dense strainer",
+                "Cup or glass",
+                "Glass or plastic bottles with airtight cork"
             ],
-            "steps":[
-                "Gotujemy 10 litrów wody.", 
-                "Wsypujemy zawartość podpiwka do wrzącej wody i gotujemy przez 15 min.", 
-                "Wsypujemy 500g cukru do wywaru i mieszamy przez minutę.",
-                "Odstawiamy wywar do schłodzenia (mniej niż 40℃)",
-                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki przypraw.",
-                "Zlewamy wywar do czystego garnka. W 50ml w kubku/szklance wody mieszamy 10-20g drożdży i dodajemy do wywaru.",
-                "Do czystych i suchych butelek wlewamy podpiwek do maks. 3/4 wysokości.",
-                "Odstawiamy podpiwek zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
+            "steps": [
+                "Boil 10 liters of water.",
+                "Add fruits and boil for 15 minutes.",
+                "Add sugar and stir for a minute.",
+                "Set the brewing aside to cool (less than 40℃).",
+                "Strain through a cloth or strainer into a second pot or dish(es). Wash the first pot. Discard any leftover ingredients.",
+                "Pour the brewing into a clean pot. Mix 10-20g of wine yeast in 50ml of water in a cup/glass and add to the brewing.",
+                "Pour the brewing into clean and dry bottles to a maximum of 3/4 of the height.",
+                "Set the brew aside in winter for 5 days, in summer for 3 days. The first day we keep in a warm place, then in a cool place."
             ],
-            "postStepsDescription": "Podpiwek po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzony."
+            "postStepsDescription": "Once prepared, consume the wine within 2 weeks. After opening, store in the refrigerator for up to 2 days. It tastes best chilled."
         },
         "comments":{
             "name":[
@@ -217,81 +221,6 @@
                 "05-12-2022",
                 "02-12-2022"
 
-            ]
-        }
-    },
-    {
-        "id": 4,
-        "tags":[
-            "podpiwek",
-            "domowy podpiwek", 
-            "homemade brew", 
-            "home brew"
-        ],
-        "imgUrl": "/sources/dataImages/homemade_brew.jpg",
-        "polish":{
-            "name":"Podpiwek", 
-            "description": "Domowy przepis na przygotowanie podpiwka.", 
-            "requiredItems":[
-                "Podpiwek Bakalland - 100g.", 
-                "Duży Garnek - min. 10l.", 
-                "Ścierka lub gęste sitko.",
-                "Świeże drożdże - 5-10g.",
-                "Drugi Garnek 10l lub inne naczynia np. miski.",
-                "Kubek lub szklanka.",
-                "Szklane lub plastikowe butelki ze szczelnym korkiem."
-            ],
-            "steps":[
-                "Gotujemy 10 litrów wody.", 
-                "Wsypujemy zawartość podpiwka do wrzącej wody i gotujemy przez 15 min, mieszając co parę minut.", 
-                "Wsypujemy 500g cukru do wywaru i mieszamy przez minutę.",
-                "Odstawiamy wywar do schłodzenia (mniej niż 40℃)",
-                "Przecedzamy przez ścierkę lub sitko do drugiego garnka lub naczynia/naczyń. Myjemy pierwszy garnek. Wyrzucamy resztki przypraw.",
-                "Zlewamy wywar do czystego garnka. W 50ml w kubku/szklance wody mieszamy 5-10g drożdży i dodajemy do wywaru.",
-                "Do czystych i suchych butelek wlewamy podpiwek do maks. 3/4 wysokości.",
-                "Odstawiamy podpiwek zimą na 5 dni, latem na 3 dni. Pierwszy dzień trzymamy w ciepłym miejscu, potem w chłodnym miejscu."
-            ],
-            "postStepsDescription": "Podpiwek po przygotowaniu spożyj w ciągu 2 tygodni. Po otwarciu przechowuj w lodówce do 2 dni. Najlepiej smakuje schłodzony."
-        },
-        "english":{
-            "name":"Brew", 
-            "description": "Recipe for preparing Homemade Brew.", 
-            "requiredItems":[
-                "Podpiwek Bakalland - 100g.", 
-                "Large Pot - min. 10l.", 
-                "Rag or a dense strainer.",
-                "Fresh yeast - 10-20g.",
-                "Second Pot 10l or other utensils e.g. bowls.",
-                "Cup or glass.",
-                "Glass or plastic bottles with an airtight cork."
-            ],
-            "steps":[
-                "Boil 10 liters of water.", 
-                "Pour the contents of the Podpiwek Bakalland into boiling water and boil for 15 min, stirring every few minutes.", 
-                "Pour 500g of sugar into the stock and stir for a minute.",
-                "Set the brewing aside to cool (less than 40℃)",
-                "Strain through a rag or strainer into a second pot or dish(es). Wash the first pot. Discard any leftover spices.",
-                "Pour the brewing into a clean pot. Mix 10-20g of yeast in 50ml in a cup/glass of water and add to the brewing.",
-                "Pour the brewing into clean and dry bottles to a maximum of 3/4 of the height.",
-                "Set the brew aside in winter for 5 days, in summer for 3 days. The first day we keep in a warm place, then in a cool place."
-            ],
-            "postStepsDescription": "Once prepared, consume the brew within 2 weeks. After opening, store in the refrigerator for up to 2 days. It tastes best chilled."
-        },
-        "comments":{
-            "name":[
-                "Anonymous",
-                "Anonymous",
-                "Anonymous"
-            ],
-            "content":[
-                "siema",
-                "nara",
-                "fajne 3"
-            ],
-            "date":[
-                "15-12-2022",
-                "05-12-2022",
-                "02-12-2022"
             ]
         }
     }
