@@ -157,7 +157,7 @@
         "imgUrl": "/sources/dataImages/wine.jpg",
         "polish":{
             "name":"Domowe Wino", 
-            "description": "Domowy przepis na przygotowanie podpiwka.", 
+            "description": "Domowy przepis na przygotowanie wina.", 
             "requiredItems": [
                 "Owoce (np. winogrona, truskawki) - 2 kg",
                 "Cukier - 500g",
